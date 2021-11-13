@@ -7,3 +7,4 @@ C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOt
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.csproj.CoreCompileInputs.cache
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.exe
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.pdb
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.Form1.resources
