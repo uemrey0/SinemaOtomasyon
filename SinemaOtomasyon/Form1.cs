@@ -18,6 +18,10 @@ namespace SinemaOtomasyon
         public Form1()
         {
             InitializeComponent();
+            if (debug)
+            {
+                lblDebug.Visible = true;
+            }
         }
         
         SqlConnection con;
