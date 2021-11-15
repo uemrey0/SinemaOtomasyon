@@ -13,6 +13,8 @@ namespace SinemaOtomasyon
 {
     public partial class Form1 : Form
     {
+        //debug mod on
+        public static bool debug = true;
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +26,14 @@ namespace SinemaOtomasyon
         String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // Fast login for debug mode
+            if (debug)
+            {
+                this.Hide();
+                MainPage newForm = new MainPage();
+                newForm.Show();
+                return;
+            }
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             if (username != "" && password != "")
