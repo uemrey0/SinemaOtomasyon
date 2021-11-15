@@ -36,7 +36,9 @@ namespace SinemaOtomasyon
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    //Giriş başarılı
+                    this.Hide();
+                    MainPage newForm = new MainPage();
+                    newForm.Show();
                 }
                 else
                 {
@@ -48,7 +50,15 @@ namespace SinemaOtomasyon
                 MessageBox.Show("Boş alan bırakmayınız", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+
+        }
+
         //Kontrol butonları
         private void btnExit_Click(object sender, EventArgs e)
         {

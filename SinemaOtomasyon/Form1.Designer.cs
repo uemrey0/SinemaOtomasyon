@@ -31,8 +31,10 @@ namespace SinemaOtomasyon
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHide = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -40,17 +42,14 @@ namespace SinemaOtomasyon
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnHide = new System.Windows.Forms.Button();
-            this.pnlTop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.btnHide);
-            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(55)))), ((int)(((byte)(137)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pnlTop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -59,6 +58,21 @@ namespace SinemaOtomasyon
             this.panel1.Size = new System.Drawing.Size(300, 190);
             this.panel1.TabIndex = 0;
             // 
+            // btnHide
+            // 
+            this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHide.BackColor = System.Drawing.Color.Gold;
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.ForeColor = System.Drawing.Color.Coral;
+            this.btnHide.Location = new System.Drawing.Point(28, 5);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(10, 10);
+            this.btnHide.TabIndex = 2;
+            this.btnHide.TabStop = false;
+            this.btnHide.UseVisualStyleBackColor = false;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -66,7 +80,7 @@ namespace SinemaOtomasyon
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Coral;
-            this.btnExit.Location = new System.Drawing.Point(12, 9);
+            this.btnExit.Location = new System.Drawing.Point(12, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(10, 10);
             this.btnExit.TabIndex = 1;
@@ -83,6 +97,20 @@ namespace SinemaOtomasyon
             this.pictureBox1.Size = new System.Drawing.Size(300, 97);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(19)))), ((int)(((byte)(81)))));
+            this.pnlTop.Controls.Add(this.btnHide);
+            this.pnlTop.Controls.Add(this.btnExit);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(300, 20);
+            this.pnlTop.TabIndex = 3;
+            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
+            this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
+            this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseUp);
             // 
             // panel2
             // 
@@ -102,17 +130,19 @@ namespace SinemaOtomasyon
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPassword.BackColor = System.Drawing.Color.SeaShell;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.Location = new System.Drawing.Point(38, 325);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(215, 19);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUsername.BackColor = System.Drawing.Color.SeaShell;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUsername.Location = new System.Drawing.Point(38, 249);
@@ -144,7 +174,7 @@ namespace SinemaOtomasyon
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(149)))), ((int)(((byte)(132)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -157,37 +187,11 @@ namespace SinemaOtomasyon
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnHide
-            // 
-            this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHide.BackColor = System.Drawing.Color.Gold;
-            this.btnHide.FlatAppearance.BorderSize = 0;
-            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.ForeColor = System.Drawing.Color.Coral;
-            this.btnHide.Location = new System.Drawing.Point(31, 9);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(10, 10);
-            this.btnHide.TabIndex = 2;
-            this.btnHide.TabStop = false;
-            this.btnHide.UseVisualStyleBackColor = false;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
-            // 
-            // pnlTop
-            // 
-            this.pnlTop.BackColor = System.Drawing.Color.Transparent;
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(300, 30);
-            this.pnlTop.TabIndex = 3;
-            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
-            this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
-            this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseUp);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(300, 450);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
@@ -203,6 +207,7 @@ namespace SinemaOtomasyon
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlTop.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
