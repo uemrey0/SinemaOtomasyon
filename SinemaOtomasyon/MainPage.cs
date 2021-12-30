@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
@@ -19,57 +20,26 @@ namespace SinemaOtomasyon
 
         public MainPage()
         {
+            
             InitializeComponent();
             leftBorderButton = new Panel();
             leftBorderButton.Size = new Size(7, 50);
             pnlMenu.Controls.Add(leftBorderButton);
-            /*
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.DoubleBuffered = true;
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
-            */
+            OpenChildForm(new FormHome());
+            btnHome_Click(btnHome, new EventArgs());
+            
         }
-        
-        /*
-        private const int cGrip = 16;      // Grip size
-        private const int cCaption = 32;   // Caption bar height;
-
-        protected override void OnPaint(PaintEventArgs e)
+        public void StartSplash()
         {
-            Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
-            ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
-            rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption);
-            e.Graphics.FillRectangle(Brushes.DarkBlue, rc);
+            Application.Run(new FormSplash());
         }
-
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {  // Trap WM_NCHITTEST
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr)2;  // HTCAPTION
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17; // HTBOTTOMRIGHT
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
-        */
-
         private void ActicateButton(object senderBtn)
         {
             if(senderBtn != null)
             {
                 DisableButton();
                 currentButton = (IconButton)senderBtn;
-                currentButton.BackColor = Color.FromArgb(105, 69, 173);
+                currentButton.BackColor = Color.FromArgb(232, 246, 239);
                 currentButton.TextAlign = ContentAlignment.MiddleCenter;
                 currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentButton.ImageAlign = ContentAlignment.MiddleRight;
@@ -87,7 +57,7 @@ namespace SinemaOtomasyon
         {
             if (currentButton != null)
             {
-                currentButton.BackColor = Color.FromArgb(84, 55, 137);
+                currentButton.BackColor = Color.FromArgb(184, 223, 216);
                 currentButton.TextAlign = ContentAlignment.MiddleLeft;
                 currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -95,7 +65,7 @@ namespace SinemaOtomasyon
             }
         }
 
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             if(currnetChildForm != null)
             {
@@ -122,6 +92,7 @@ namespace SinemaOtomasyon
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        
 
         //Panel ile hareket ettirme
         bool move;
@@ -161,13 +132,15 @@ namespace SinemaOtomasyon
         private void btnMovie_Click(object sender, EventArgs e)
         {
             ActicateButton(sender);
-            OpenChildForm(new FormMovie());
+            OpenChildForm(new FormMovies());
         }
 
-        private void btnTheaters_Click(object sender, EventArgs e)
+        private void pictureLogo_Click(object sender, EventArgs e)
         {
-            ActicateButton(sender);
-            OpenChildForm(new FormTheaters());
+            DisableButton();
+            leftBorderButton.Visible = false;
+            OpenChildForm(new FormHome());
+            iconCurrentChildForm.IconChar = IconChar.HandPointRight;
         }
     }
 }

@@ -13,6 +13,12 @@ namespace SinemaOtomasyon
 {
     public partial class Form1 : Form
     {
+        //Sql connection global vars
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader dr;
+        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+
         //debug mod on
         public static bool debug = true;
         public Form1()
@@ -24,10 +30,7 @@ namespace SinemaOtomasyon
             }
         }
         
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataReader dr;
-        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // Fast login for debug mode
@@ -50,7 +53,7 @@ namespace SinemaOtomasyon
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    this.Hide();
+                    this.Close();
                     MainPage newForm = new MainPage();
                     newForm.Show();
                 }

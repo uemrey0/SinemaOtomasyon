@@ -67,6 +67,24 @@
     <Compile Include="FormMovie.Designer.cs">
       <DependentUpon>FormMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovies.Designer.cs">
+      <DependentUpon>FormMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSell.Designer.cs">
+      <DependentUpon>FormSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSplash.Designer.cs">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTheaters.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +107,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSell.resx">
+      <DependentUpon>FormSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSplash.resx">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTicket.resx">
+      <DependentUpon>FormTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
@@ -119,6 +149,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoSinema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not-found-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3rd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2nd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1st.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

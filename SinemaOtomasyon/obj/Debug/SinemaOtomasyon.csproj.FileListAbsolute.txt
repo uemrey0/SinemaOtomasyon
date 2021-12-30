@@ -10,3 +10,7 @@ C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOt
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.Form1.resources
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.MainPage.resources
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormHome.resources
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormSplash.resources
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormTicket.resources
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormSell.resources

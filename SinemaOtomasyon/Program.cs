@@ -19,4 +19,6 @@ namespace SinemaOtomasyon
             Application.Run(new Form1());
         }
     }
+
+
 }

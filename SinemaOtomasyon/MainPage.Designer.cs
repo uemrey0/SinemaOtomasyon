@@ -33,24 +33,23 @@ namespace SinemaOtomasyon
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnTheaters = new FontAwesome.Sharp.IconButton();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pnlContainer = new System.Windows.Forms.Panel();
+            this.pnlDesktop = new System.Windows.Forms.Panel();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.btnMovie = new FontAwesome.Sharp.IconButton();
             this.btnTicket = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureLogo = new System.Windows.Forms.PictureBox();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.pnlDesktop = new System.Windows.Forms.Panel();
             this.pnlTop.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.pnlTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.pnlContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHide
@@ -83,7 +82,7 @@ namespace SinemaOtomasyon
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(19)))), ((int)(((byte)(81)))));
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.pnlTop.Controls.Add(this.btnHide);
             this.pnlTop.Controls.Add(this.btnExit);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -97,8 +96,7 @@ namespace SinemaOtomasyon
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(55)))), ((int)(((byte)(137)))));
-            this.pnlMenu.Controls.Add(this.btnTheaters);
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(223)))), ((int)(((byte)(216)))));
             this.pnlMenu.Controls.Add(this.btnMovie);
             this.pnlMenu.Controls.Add(this.btnTicket);
             this.pnlMenu.Controls.Add(this.btnHome);
@@ -109,35 +107,78 @@ namespace SinemaOtomasyon
             this.pnlMenu.Size = new System.Drawing.Size(210, 680);
             this.pnlMenu.TabIndex = 7;
             // 
-            // btnTheaters
+            // pnlLogo
             // 
-            this.btnTheaters.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTheaters.FlatAppearance.BorderSize = 0;
-            this.btnTheaters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTheaters.ForeColor = System.Drawing.Color.Snow;
-            this.btnTheaters.IconChar = FontAwesome.Sharp.IconChar.ProjectDiagram;
-            this.btnTheaters.IconColor = System.Drawing.Color.Snow;
-            this.btnTheaters.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTheaters.IconSize = 32;
-            this.btnTheaters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTheaters.Location = new System.Drawing.Point(0, 236);
-            this.btnTheaters.Name = "btnTheaters";
-            this.btnTheaters.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnTheaters.Size = new System.Drawing.Size(210, 50);
-            this.btnTheaters.TabIndex = 4;
-            this.btnTheaters.Text = "Salonlar";
-            this.btnTheaters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTheaters.UseVisualStyleBackColor = true;
-            this.btnTheaters.Click += new System.EventHandler(this.btnTheaters_Click);
+            this.pnlLogo.Controls.Add(this.pictureLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(210, 86);
+            this.pnlLogo.TabIndex = 0;
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(223)))), ((int)(((byte)(216)))));
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Controls.Add(this.iconCurrentChildForm);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(890, 60);
+            this.pnlTitle.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Oswald", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.lblTitle.Location = new System.Drawing.Point(44, 13);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(97, 26);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Hoş Geldiniz!";
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.pnlContainer.Controls.Add(this.pnlDesktop);
+            this.pnlContainer.Controls.Add(this.pnlTitle);
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(210, 20);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(890, 680);
+            this.pnlContainer.TabIndex = 8;
+            // 
+            // pnlDesktop
+            // 
+            this.pnlDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDesktop.Location = new System.Drawing.Point(0, 60);
+            this.pnlDesktop.Name = "pnlDesktop";
+            this.pnlDesktop.Size = new System.Drawing.Size(890, 620);
+            this.pnlDesktop.TabIndex = 1;
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(223)))), ((int)(((byte)(216)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.HandPointRight;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 13);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
+            this.iconCurrentChildForm.TabIndex = 0;
+            this.iconCurrentChildForm.TabStop = false;
             // 
             // btnMovie
             // 
             this.btnMovie.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMovie.FlatAppearance.BorderSize = 0;
             this.btnMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMovie.ForeColor = System.Drawing.Color.Snow;
+            this.btnMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.btnMovie.IconChar = FontAwesome.Sharp.IconChar.Film;
-            this.btnMovie.IconColor = System.Drawing.Color.Snow;
+            this.btnMovie.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.btnMovie.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMovie.IconSize = 32;
             this.btnMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,9 +197,9 @@ namespace SinemaOtomasyon
             this.btnTicket.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTicket.FlatAppearance.BorderSize = 0;
             this.btnTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTicket.ForeColor = System.Drawing.Color.Snow;
+            this.btnTicket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.btnTicket.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            this.btnTicket.IconColor = System.Drawing.Color.Snow;
+            this.btnTicket.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.btnTicket.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTicket.IconSize = 32;
             this.btnTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,9 +218,9 @@ namespace SinemaOtomasyon
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.Snow;
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnHome.IconColor = System.Drawing.Color.Snow;
+            this.btnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHome.IconSize = 32;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,79 +234,16 @@ namespace SinemaOtomasyon
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.pictureLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(210, 86);
-            this.pnlLogo.TabIndex = 0;
-            // 
             // pictureLogo
             // 
             this.pictureLogo.BackgroundImage = global::SinemaOtomasyon.Properties.Resources.LogoSinema;
             this.pictureLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureLogo.Location = new System.Drawing.Point(0, -1);
             this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(194, 71);
+            this.pictureLogo.Size = new System.Drawing.Size(194, 61);
             this.pictureLogo.TabIndex = 0;
             this.pictureLogo.TabStop = false;
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(55)))), ((int)(((byte)(137)))));
-            this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Controls.Add(this.iconCurrentChildForm);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(890, 60);
-            this.pnlTitle.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Oswald", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Snow;
-            this.lblTitle.Location = new System.Drawing.Point(44, 13);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(50, 26);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Home";
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(55)))), ((int)(((byte)(137)))));
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.Cornsilk;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.Cornsilk;
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 13);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
-            this.iconCurrentChildForm.TabIndex = 0;
-            this.iconCurrentChildForm.TabStop = false;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.pnlContainer.Controls.Add(this.pnlDesktop);
-            this.pnlContainer.Controls.Add(this.pnlTitle);
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(210, 20);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(890, 680);
-            this.pnlContainer.TabIndex = 8;
-            // 
-            // pnlDesktop
-            // 
-            this.pnlDesktop.BackColor = System.Drawing.Color.SeaShell;
-            this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDesktop.Location = new System.Drawing.Point(0, 60);
-            this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(890, 620);
-            this.pnlDesktop.TabIndex = 1;
+            this.pictureLogo.Click += new System.EventHandler(this.pictureLogo_Click);
             // 
             // MainPage
             // 
@@ -282,11 +260,11 @@ namespace SinemaOtomasyon
             this.pnlTop.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.pnlContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,7 +278,6 @@ namespace SinemaOtomasyon
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureLogo;
         private FontAwesome.Sharp.IconButton btnHome;
-        private FontAwesome.Sharp.IconButton btnTheaters;
         private FontAwesome.Sharp.IconButton btnMovie;
         private FontAwesome.Sharp.IconButton btnTicket;
         private System.Windows.Forms.Panel pnlTitle;
