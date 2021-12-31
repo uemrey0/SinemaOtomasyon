@@ -57,6 +57,9 @@ namespace SinemaOtomasyon
                 this.Controls.Find("button" + i.ToString(), true)[0].Enabled = false;
                 this.Controls.Find("button" + i.ToString(), true)[0].BackColor = SystemColors.Control;
             }
+            lblAdult.Text = "";
+            lblStudent.Text = "";
+            lblTop.Text = "";
         }
         private void ChairLoad() // satılan koltukların yüklenmesi ve aktifleştirilmesi
         {
@@ -263,12 +266,12 @@ namespace SinemaOtomasyon
                 {
                     studentCount.Add(((Button)sender).Name);
                     lblStudent.Text = studentCount.Count.ToString();
-                    lblTop.Text = studentCount.Count*23
                 }
                 else
                 {
                     adultCount.Add(((Button)sender).Name);
                     lblAdult.Text = adultCount.Count.ToString();
+
                 }
                 if (cancelChair.Count == 0 && !selectedChair.Contains(((Button)sender).Name))
 
@@ -276,6 +279,8 @@ namespace SinemaOtomasyon
                     ((Button)sender).BackColor = Color.Green;
                     selectedChair.Add(((Button)sender).Name);
                 }
+                toplam = (studentCount.Count*23) + (adultCount.Count*25);
+                lblTop.Text = toplam.ToString();
             }
 
             else if (((Button)sender).BackColor == Color.Green) // yeşil
@@ -302,6 +307,8 @@ namespace SinemaOtomasyon
                     selectedChair.Remove(((Button)sender).Name);
 
                 }
+                toplam = (studentCount.Count * 23) + (adultCount.Count * 25);
+                lblTop.Text = toplam.ToString();
             }
             else if (((Button)sender).BackColor == Color.Orange)// turuncu
             {

@@ -712,9 +712,8 @@ namespace SinemaOtomasyon
             this.lblTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTop.Location = new System.Drawing.Point(748, 379);
             this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(31, 20);
+            this.lblTop.Size = new System.Drawing.Size(0, 20);
             this.lblTop.TabIndex = 12;
-            this.lblTop.Text = "0 ₺";
             // 
             // buttonCancel
             // 
