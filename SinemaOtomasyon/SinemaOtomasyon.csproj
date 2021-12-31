@@ -61,12 +61,6 @@
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMovie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMovie.Designer.cs">
-      <DependentUpon>FormMovie.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMovies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +99,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormEnterUrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEnterUrl.Designer.cs">
+      <DependentUpon>FormEnterUrl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovies.resx">
+      <DependentUpon>FormMovies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSell.resx">
       <DependentUpon>FormSell.cs</DependentUpon>
@@ -133,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormEnterUrl.resx">
+      <DependentUpon>FormEnterUrl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,6 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1st.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

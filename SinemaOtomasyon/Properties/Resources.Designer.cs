@@ -93,6 +93,16 @@ namespace SinemaOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel {
+            get {
+                object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap loading {
             get {
                 object obj = ResourceManager.GetObject("loading", resourceCulture);
@@ -106,6 +116,16 @@ namespace SinemaOtomasyon.Properties {
         internal static System.Drawing.Bitmap LogoSinema {
             get {
                 object obj = ResourceManager.GetObject("LogoSinema", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap No_Image {
+            get {
+                object obj = ResourceManager.GetObject("No-Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -162,9 +162,9 @@ namespace SinemaOtomasyon
             DisableChair();
             comboSalon.Items.Clear();
             comboSession.Items.Clear();
+            string selectedName = this.comboMovie.GetItemText(this.comboMovie.SelectedItem);
             using (SqlConnection sqlConnection = new SqlConnection(conString))
             {
-                string selectedName = this.comboMovie.GetItemText(this.comboMovie.SelectedItem);
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM movie_info WHERE name = '" + selectedName+"'", sqlConnection);
                 sqlConnection.Open();
                 SqlDataReader sqlReader = sqlCmd.ExecuteReader();
@@ -178,7 +178,6 @@ namespace SinemaOtomasyon
             }
             using (SqlConnection sqlConnection = new SqlConnection(conString))
             {
-
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM session_info WHERE movie_id = "+movie_id, sqlConnection);
                 sqlConnection.Open();
                 SqlDataReader sqlReader = sqlCmd.ExecuteReader();

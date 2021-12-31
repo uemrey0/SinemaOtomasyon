@@ -815,7 +815,7 @@ namespace SinemaOtomasyon
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTicket";
-            this.Text = " ";
+            this.Text = "Bilet Satış";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
