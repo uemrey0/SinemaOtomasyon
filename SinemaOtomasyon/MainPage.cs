@@ -135,6 +135,18 @@ namespace SinemaOtomasyon
             OpenChildForm(new FormMovies());
         }
 
+        private void btnTheater_Click(object sender, EventArgs e)
+        {
+            ActicateButton(sender);
+            OpenChildForm(new FormTheaters());
+        }
+
+        private void btnSession_Click(object sender, EventArgs e)
+        {
+            ActicateButton(sender);
+            OpenChildForm(new FormSession());
+        }
+
         private void pictureLogo_Click(object sender, EventArgs e)
         {
             DisableButton();

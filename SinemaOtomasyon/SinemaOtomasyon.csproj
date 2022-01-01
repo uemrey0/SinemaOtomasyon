@@ -73,6 +73,12 @@
     <Compile Include="FormSell.Designer.cs">
       <DependentUpon>FormSell.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSession.Designer.cs">
+      <DependentUpon>FormSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +123,14 @@
     <EmbeddedResource Include="FormSell.resx">
       <DependentUpon>FormSell.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSession.resx">
+      <DependentUpon>FormSession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSplash.resx">
       <DependentUpon>FormSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTheaters.resx">
+      <DependentUpon>FormTheaters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTicket.resx">
       <DependentUpon>FormTicket.cs</DependentUpon>

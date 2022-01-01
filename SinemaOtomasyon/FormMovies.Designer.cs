@@ -51,6 +51,7 @@ namespace SinemaOtomasyon
             this.movieGrid.Name = "movieGrid";
             this.movieGrid.Size = new System.Drawing.Size(280, 596);
             this.movieGrid.TabIndex = 0;
+            this.movieGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.movieGrid_CellClick);
             this.movieGrid.SelectionChanged += new System.EventHandler(this.movieGrid_SelectionChanged);
             // 
             // txtName
@@ -145,7 +146,7 @@ namespace SinemaOtomasyon
             // 
             // buttonNew
             // 
-            this.buttonNew.Location = new System.Drawing.Point(57, 23);
+            this.buttonNew.Location = new System.Drawing.Point(57, 12);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(75, 23);
             this.buttonNew.TabIndex = 7;

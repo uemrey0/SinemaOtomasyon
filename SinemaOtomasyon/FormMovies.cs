@@ -24,6 +24,7 @@ namespace SinemaOtomasyon
 
         private void GridLoad()
         {
+            movieGrid.Rows.Clear();
             movieGrid.ReadOnly = true; // sadece okunabilir olması yani veri düzenleme kapalı
             movieGrid.AllowUserToDeleteRows = false; // satırların silinmesi engelleniyor
             movieGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -82,13 +83,13 @@ namespace SinemaOtomasyon
         private void movieGrid_SelectionChanged(object sender, EventArgs e)
         {
             isNew = false;
-            LoadData(movieGrid.CurrentCell.RowIndex + 1);
+            LoadData(int.Parse(movieGrid.CurrentRow.Cells[0].Value.ToString()));
         }
 
         private void buttonImage_Click(object sender, EventArgs e)
         {
-            dialog.ShowDialog();            
-            MessageBox.Show(dialog.imgUrl);
+            dialog.ShowDialog();
+            pictureBox.Load(dialog.imgUrl);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -107,12 +108,14 @@ namespace SinemaOtomasyon
             {
                 using (SqlConnection sqlConnection = new SqlConnection(conString))
                 {
-                    SqlCommand sqlCmd = new SqlCommand("UPDATE movie_info WHERE id = "+movieGrid.CurrentCell.RowIndex + " (name,director,type,image_url) VALUES ('" + txtName.Text + "','" + txtDirector.Text + "','" + comboType.SelectedIndex + "','" + dialog.imgUrl + "')", sqlConnection);
+                    SqlCommand sqlCmd = new SqlCommand("UPDATE movie_info SET name = '" + txtName.Text + "',director = '" + txtDirector.Text + "',type = '" + comboType.SelectedIndex + "',image_url = '" + dialog.imgUrl + "' WHERE id = '" + int.Parse(movieGrid.CurrentRow.Cells[0].Value.ToString()) +"'", sqlConnection);
                     sqlConnection.Open();
                     sqlCmd.ExecuteNonQuery();
                     sqlConnection.Close();
                 }
             }
+            GridLoad();
+            isNew = false;
         }
 
         private void buttonNew_Click(object sender, EventArgs e)
@@ -122,6 +125,18 @@ namespace SinemaOtomasyon
             txtDirector.Text = "";
             comboType.SelectedIndex = 0;
             pictureBox.Image = null;
+        }
+
+        private void movieGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (movieGrid.RowCount > 0)
+            {
+                if (e.ColumnIndex == 2)
+                {
+                    int id = int.Parse(movieGrid.CurrentRow.Cells[0].Value.ToString());//the primary key for your table.
+                    DeleteData(id);
+                }
+            }
         }
     }
 }

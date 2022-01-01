@@ -16,3 +16,5 @@ C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOt
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormSell.resources
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormMovies.resources
 C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormEnterUrl.resources
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormTheaters.resources
+C:\Users\MONSTER\source\repos\SinemaOtomasyon\SinemaOtomasyon\obj\Debug\SinemaOtomasyon.FormSession.resources

@@ -39,6 +39,8 @@ namespace SinemaOtomasyon
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlDesktop = new System.Windows.Forms.Panel();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.btnTheater = new FontAwesome.Sharp.IconButton();
+            this.btnSession = new FontAwesome.Sharp.IconButton();
             this.btnMovie = new FontAwesome.Sharp.IconButton();
             this.btnTicket = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
@@ -97,6 +99,8 @@ namespace SinemaOtomasyon
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(223)))), ((int)(((byte)(216)))));
+            this.pnlMenu.Controls.Add(this.btnTheater);
+            this.pnlMenu.Controls.Add(this.btnSession);
             this.pnlMenu.Controls.Add(this.btnMovie);
             this.pnlMenu.Controls.Add(this.btnTicket);
             this.pnlMenu.Controls.Add(this.btnHome);
@@ -170,6 +174,48 @@ namespace SinemaOtomasyon
             this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
+            // 
+            // btnTheater
+            // 
+            this.btnTheater.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTheater.FlatAppearance.BorderSize = 0;
+            this.btnTheater.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTheater.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.btnTheater.IconChar = FontAwesome.Sharp.IconChar.Chair;
+            this.btnTheater.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.btnTheater.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTheater.IconSize = 32;
+            this.btnTheater.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTheater.Location = new System.Drawing.Point(0, 286);
+            this.btnTheater.Name = "btnTheater";
+            this.btnTheater.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTheater.Size = new System.Drawing.Size(210, 50);
+            this.btnTheater.TabIndex = 4;
+            this.btnTheater.Text = "Salonlar";
+            this.btnTheater.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTheater.UseVisualStyleBackColor = true;
+            this.btnTheater.Click += new System.EventHandler(this.btnTheater_Click);
+            // 
+            // btnSession
+            // 
+            this.btnSession.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSession.FlatAppearance.BorderSize = 0;
+            this.btnSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSession.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.btnSession.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.btnSession.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
+            this.btnSession.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSession.IconSize = 32;
+            this.btnSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSession.Location = new System.Drawing.Point(0, 236);
+            this.btnSession.Name = "btnSession";
+            this.btnSession.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSession.Size = new System.Drawing.Size(210, 50);
+            this.btnSession.TabIndex = 5;
+            this.btnSession.Text = "Seanslar";
+            this.btnSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSession.UseVisualStyleBackColor = true;
+            this.btnSession.Click += new System.EventHandler(this.btnSession_Click);
             // 
             // btnMovie
             // 
@@ -285,5 +331,7 @@ namespace SinemaOtomasyon
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel pnlDesktop;
+        private FontAwesome.Sharp.IconButton btnTheater;
+        private FontAwesome.Sharp.IconButton btnSession;
     }
 }
