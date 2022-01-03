@@ -29,10 +29,6 @@ namespace SinemaOtomasyon
             btnHome_Click(btnHome, new EventArgs());
             
         }
-        public void StartSplash()
-        {
-            Application.Run(new FormSplash());
-        }
         private void ActicateButton(object senderBtn)
         {
             if(senderBtn != null)
