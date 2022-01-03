@@ -60,6 +60,9 @@ namespace SinemaOtomasyon
             lblAdult.Text = "";
             lblStudent.Text = "";
             lblTop.Text = "";
+            toplam = 0;
+            adultCount.Clear(); 
+            studentCount.Clear();
         }
         private void ChairLoad() // satılan koltukların yüklenmesi ve aktifleştirilmesi
         {
