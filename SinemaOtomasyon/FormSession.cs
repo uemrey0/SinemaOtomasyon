@@ -14,7 +14,7 @@ namespace SinemaOtomasyon
     public partial class FormSession : Form
     {
         bool isNew = true;
-        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+        String conString = Connection.connString;
         public FormSession()
         {
             InitializeComponent();

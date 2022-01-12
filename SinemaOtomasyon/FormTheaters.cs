@@ -14,7 +14,7 @@ namespace SinemaOtomasyon
     public partial class FormTheaters : Form
     {
         bool isNew = false;
-        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+        String conString = Connection.connString;
         public FormTheaters()
         {
             InitializeComponent();

@@ -15,7 +15,7 @@ namespace SinemaOtomasyon
     {
         bool isNew = false;
         FormEnterUrl dialog = new FormEnterUrl();
-        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+        String conString = Connection.connString;
         public FormMovies()
         {
             InitializeComponent();

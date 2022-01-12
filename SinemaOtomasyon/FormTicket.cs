@@ -14,7 +14,7 @@ namespace SinemaOtomasyon
 {
     public partial class FormTicket : Form
     {
-        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+        String conString = Connection.connString;
         public static ArrayList selectedChair = new ArrayList();
         public static ArrayList cancelChair = new ArrayList();
         public static ArrayList studentCount = new ArrayList();

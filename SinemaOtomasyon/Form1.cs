@@ -17,10 +17,10 @@ namespace SinemaOtomasyon
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
-        String conString = "Data Source=BOSS;Initial Catalog=sinema;Integrated Security=True";
+        String conString = Connection.connString;
 
         //debug mod on
-        public static bool debug = true;
+        public static bool debug = false;
         public Form1()
         {
             InitializeComponent();
@@ -53,7 +53,7 @@ namespace SinemaOtomasyon
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    this.Close();
+                    this.Hide();
                     MainPage newForm = new MainPage();
                     newForm.Show();
                 }
